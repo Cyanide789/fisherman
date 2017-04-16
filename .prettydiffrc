@@ -1,0 +1,6 @@
+{
+    "mode": "beautify",
+    "methodchain": "chain",
+    "ternaryline": false,
+    "wrap": 80
+}

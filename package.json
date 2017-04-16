@@ -1,0 +1,27 @@
+{
+  "name": "fisherman",
+  "version": "1.0.0",
+  "description": "Fisherman is a small command-line game in JavaScript.",
+  "private": true,
+  "main": "fisherman.js",
+  "scripts": {
+    "test": "tape test/*js",
+    "start": "node fisherman.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cyanide789/fisherman.git"
+  },
+  "author": "cyanide789",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cyanide789/fisherman/issues"
+  },
+  "homepage": "https://github.com/Cyanide789/fisherman#readme",
+  "devDependencies": {
+    "tape": "^4.6.3"
+  },
+  "dependencies": {
+    "prompt": "^1.0.0"
+  }
+}

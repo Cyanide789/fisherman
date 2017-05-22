@@ -75,19 +75,19 @@ function processCommand(command, args) {
     switch (command) {
 
         case "inv":
-            format(game.getPlayerInventory());
+            writeToConsoleFormatted(game.getPlayerInventory());
             break;
         case "fish":
-            format(game.fish());
+            writeToConsoleFormatted(game.fish());
             break;
         case "shop":
-            format(game.shop());
+            writeToConsoleFormatted(game.shop());
             break;
         case "echo":
-            format("Echo: " + args);
+            writeToConsoleFormatted("Echo: " + args);
             break;
         case "help":
-            format(help());
+            writeToConsoleFormatted(help());
             break;
         case "quit":
         case "exit":
@@ -103,15 +103,19 @@ function processCommand(command, args) {
  * Displays a list of available commands.
  */
 function help() {
-    var msg = ("--- Fisherman help ---");
-    msg += "\nYou are currently fishing. Available commands:";
-    msg += "\n  inv  -- Displays the player inventory";
-    msg += "\n  fish -- Attempts to catch a fish";
-    msg += "\n  quit -- Quit the game";
-    msg += "\n  exit -- Synonymous to quit";
+    var msg = "%s--- Fisherman help ---";
+    msg += "%sYou are currently fishing. Available commands:";
+    msg += "%s  inv  -- Displays the player inventory";
+    msg += "%s  fish -- Attempts to catch a fish";
+    msg += "%s  quit -- Quit the game";
+    msg += "%s  exit -- Synonymous to quit";
     return msg;
 }
 
-function format(message) {
-    console.log("\n    " + message, "\n");
+function writeToConsoleFormatted(message) {
+    while ((message + "").search("%s") >= 0) {
+        message = (message + "").replace("%s", "\n  ");
+    }
+    message += "\n";
+    console.log(message);
 }

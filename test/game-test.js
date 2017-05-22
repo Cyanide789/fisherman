@@ -6,9 +6,10 @@ var dom = require("../lib/domain");
 
 test("Can fish", function (assert) {
     var player = new dom.Player("player1");
-    var bait = player.inventory.bait;
+    var bait = 5;
+    player.inventory.bait = bait
     var fish = player.inventory.fish.length;
-    assert.true(player.inventory.bait > 0, "Precondition: the player has bait");
+    assert.equals(player.inventory.bait, 5, "Precondition: the player has bait");
     game.setPlayer(player);
     game.fish();
     assert.true(bait - player.inventory.bait > 0, "The player has used bait");

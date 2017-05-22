@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Cyanide789/fisherman.git"
+    "url": "git+https://github.com/cyanide789/fisherman.git"
   },
   "author": "cyanide789",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Cyanide789/fisherman/issues"
+    "url": "https://github.com/cyanide789/fisherman/issues"
   },
-  "homepage": "https://github.com/Cyanide789/fisherman#readme",
+  "homepage": "https://github.com/cyanide789/fisherman#readme",
   "devDependencies": {
     "tape": "^4.6.3"
   },
